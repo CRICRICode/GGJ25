@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://oa6rk4r0wl27"]
+
+[ext_resource type="Script" path="res://Script/player.gd" id="1_5j270"]
+[ext_resource type="Script" path="res://Script/playerDynamicCollision.gd" id="2_p1w4t"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_40l0s"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_3yeqd"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gfsun"]
+radius = 0.19
+height = 1.015
+
+[node name="player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+script = ExtResource("1_5j270")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_40l0s")
+script = ExtResource("2_p1w4t")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33638, 0, 0, 0, -1.10617e-08, 0.128241, 0, -0.253062, -5.60558e-09, -5.6839e-05, 3.68248e-05, -0.227113)
+mesh = SubResource("PrismMesh_3yeqd")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33638, 0, 0, 0, -1.10617e-08, 0.128241, 0, -0.253062, -5.60558e-09, -0.000890064, -0.264966, -0.227393)
+mesh = SubResource("PrismMesh_3yeqd")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.33638, 0, 0, 0, -1.10617e-08, 0.128241, 0, -0.253062, -5.60558e-09, -5.6839e-05, 0.235482, -0.227113)
+mesh = SubResource("PrismMesh_3yeqd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_gfsun")

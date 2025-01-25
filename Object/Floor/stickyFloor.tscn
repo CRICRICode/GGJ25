@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://8bo8w1gqc4iq"]
+
+[ext_resource type="Script" path="res://Script/dynamic_collision_stickyFloor.gd" id="1_pe4yl"]
+[ext_resource type="Script" path="res://Script/sticky_floor.gd" id="1_w6lap"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_44ce5"]
+size = Vector3(4, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fj0tf"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dxyo3"]
+size = Vector3(4.5, 1.34485, 1.25)
+
+[node name="stickyFloor" type="StaticBody3D"]
+script = ExtResource("1_w6lap")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_44ce5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_fj0tf")
+script = ExtResource("1_pe4yl")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.109924, 0)
+shape = SubResource("BoxShape3D_dxyo3")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

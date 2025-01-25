@@ -1,0 +1,9 @@
+Piattaforme:
+	Default -> Si può atterrare con entrambe le parti
+	
+	Bubble -> Scoppiano a contatto con gli aculei | poco più alto rispetto alla default
+		Destroy -> Si distruggono dopo X salti, effetuati con la pancia
+		jumpBooster -> Fa saltare più in alto
+	
+	Stucked -> Di miele | Si rimane attaccati con gli aculei (Si decide la direzione)  
+				| rallenti con la pancia

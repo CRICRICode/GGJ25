@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://uplfuj6d8jov"
+path="res://.godot/imported/BubbleMesh.obj-3a88ced7a10043ff66cc15b3edd829f3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BubbleMesh.obj-3a88ced7a10043ff66cc15b3edd829f3.mesh"]
+
+source_file="res://Assets/Obj/BubbleMesh.obj"
+dest_files=["res://.godot/imported/BubbleMesh.obj-3a88ced7a10043ff66cc15b3edd829f3.mesh", "res://.godot/imported/BubbleMesh.obj-3a88ced7a10043ff66cc15b3edd829f3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
