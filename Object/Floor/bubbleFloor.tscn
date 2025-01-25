@@ -1,19 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8x473nvqg0ob"]
+[gd_scene load_steps=7 format=3 uid="uid://c8x473nvqg0ob"]
 
 [ext_resource type="Script" path="res://Script/bubbleFloor.gd" id="1_3x0r7"]
 [ext_resource type="Script" path="res://Script/floorDynamicCollision.gd" id="2_m0foc"]
-[ext_resource type="Texture2D" path="res://Assets/Texture/texture_test/Bubble_Soap Bubble_BaseColor.png" id="4_56fyq"]
-[ext_resource type="Texture2D" path="res://Assets/Texture/texture_test/Bubble_Soap Bubble_Metallic.png" id="5_km8vh"]
 [ext_resource type="Script" path="res://Script/collision_shape_area3d.gd" id="6_dopd5"]
-[ext_resource type="Texture2D" path="res://Assets/Texture/texture_test/Bubble_Soap Bubble_Roughness.png" id="6_w238j"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_xfyml"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tfucw"]
-albedo_texture = ExtResource("4_56fyq")
-metallic = 1.0
-metallic_texture = ExtResource("5_km8vh")
-roughness_texture = ExtResource("6_w238j")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_vxsi5"]
 
@@ -24,7 +15,6 @@ script = ExtResource("1_3x0r7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_xfyml")
-surface_material_override/0 = SubResource("StandardMaterial3D_tfucw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00303257, 0)
